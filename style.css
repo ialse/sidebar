@@ -1,0 +1,109 @@
+.html,
+.body {
+  height: 100%;
+  width: 100%;
+}
+
+.page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  width: 100vw;
+  height: 100px;
+  background-color: slategrey;
+}
+
+.header__button {
+  margin: 20px 0 0 20px;
+  background-color: transparent;
+  border: none;
+  background-image: url('./images/button-menu.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+}
+
+.header__button:hover {
+  opacity: 0.5;
+  transition: opacity 0.4s;
+  cursor: pointer;
+}
+
+.header__button:focus {
+  outline: none;
+}
+
+.main {
+  display: flex;
+  min-height: calc(100% - 100px);
+}
+
+.content {
+  padding: 15px;
+  margin-left: 0px;
+  transition: margin-left 0.4s;
+}
+
+.content_menu-open {
+  margin-left: 200px;
+  transition: margin-left 0.4s;
+}
+
+.nav {
+  background-color: tan;
+  min-width: 200px;
+  height: 100%;
+  position: fixed;
+  top: 100px;
+  left: -200px;
+  transition: left 0.4s;
+}
+
+.nav_open {
+  left: 0;
+  transition: left 0.4s;
+}
+
+.menu {
+  margin: 0;
+  padding-top: 30px;
+}
+
+.menu__item {
+  list-style: none;
+  margin-bottom: 15px;
+}
+
+.menu__link {
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 1.21;
+  color: #000;
+  opacity: 1;
+  transition: opacity 0.4s;
+}
+
+.menu__link:hover {
+  opacity: 0.5;
+  transition: opacity 0.4s;
+}
+
+@media screen and (min-width: 1200px) {
+  .header__button {
+    display: none;
+  }
+
+  .nav {
+    left: 0;
+    transition: left 0.4s;
+  }
+
+  .content {
+    margin-left: 200px;
+    transition: margin-left 0.4s;
+  }
+}
